@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <custattr translate="label" module="custattrordergrid">
+            <label>Custom Order Grid Attributes</label>
+            <sort_order>0</sort_order>
+        </custattr>
+    </tabs>
+    <sections>
+        <custattrordergrid translate="label" module="custattrordergrid">
+            <label>Custom Order Grid Attributes</label>
+            <tab>customconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <customattributes translate="label">
+                    <label>Order Grid Custom Attributes</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <attrcode>
+                            <label>Attributes Json</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Add Attributes Json</comment>
+                        </attrcode>
+                    </fields>
+                </customattributes>
+            </groups>
+        </custattrordergrid>
+    </sections>
+
+</config>

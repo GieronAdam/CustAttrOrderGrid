@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ag_CustAttrOrderGrid>
+            <version>0.1.0</version>
+        </Ag_CustAttrOrderGrid>
+    </modules>
+    <global>
+        <helpers>
+            <custattrordergrid>
+                <class>Ag_CustAttrOrderGrid_Helper</class>
+            </custattrordergrid>
+        </helpers>
+        <blocks>
+            <custattrordergrid>
+                <class>Ag_CustAttrOrderGrid_Block</class>
+            </custattrordergrid>
+            <adminhtml>
+            <rewrite>
+            <sales_order_grid>Ag_CustAttrOrderGrid_Adminhtml_Block_Sales_Order_Grid</sales_order_grid>
+            </rewrite>
+            </adminhtml>
+        </blocks>
+    </global>
+    <admin>
+        <routers>
+            <custattrordergrid>
+                <use>admin</use>
+                <args>
+                    <module>Ag_CustAttrOrderGrid</module>
+                    <frontName>admin_custattrordergrid</frontName>
+                </args>
+            </custattrordergrid>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <custattrordergrid module="custattrordergrid">
+                <title>Order Grid Custom Attributes</title>
+                <sort_order>100</sort_order>
+                <children>
+                    <custattrordergridbackend module="custattrordergrid">
+                        <title>Configuration</title>
+                        <sort_order>0</sort_order>
+                        <action>adminhtml/system_config/edit/section/custattrordergrid/</action>
+                    </custattrordergridbackend>
+                    <!--<custattrordergridbackend_contro module="custattrordergrid">-->
+                        <!--<title>testController</title>-->
+                        <!--<sort_order>0</sort_order>-->
+                        <!--<action>admin_custattrordergrid/adminhtml_custattrordergridbackend/develop</action>-->
+                    <!--</custattrordergridbackend_contro>-->
+                </children>
+            </custattrordergrid>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <custattrordergrid translate="title" module="custattrordergrid">
+                            <title>CustAttrOrderGrid</title>
+                            <sort_order>1000</sort_order>
+                            <children>
+                                <custattrordergridbackend translate="title">
+                                    <title>CustAttrOrderGrid</title>
+                                </custattrordergridbackend>
+                            </children>
+                        </custattrordergrid>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config> 

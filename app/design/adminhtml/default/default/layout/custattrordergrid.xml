@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <custattrordergrid_adminhtml_custattrordergridbackend_index>
+	<reference name="content">
+	  <block type="custattrordergrid/adminhtml_custattrordergridbackend" name="custattrordergridbackend" template="custattrordergrid/custattrordergridbackend.phtml"/>
+	</reference>
+  </custattrordergrid_adminhtml_custattrordergridbackend_index>
+</layout>
